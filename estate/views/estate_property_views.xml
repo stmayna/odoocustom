@@ -8,11 +8,5 @@
       <field name="view_mode">tree,form</field>
     </record>
 
-    <menuitem id="estate.menu_root" name="Real Estate">
-        <menuitem id="estate.menu_1" name="Advertisements">
-            <menuitem id="estate.menu_1_list" action="estate.action_window"/>
-        </menuitem>
-    </menuitem>
-
   </data>
 </odoo>
