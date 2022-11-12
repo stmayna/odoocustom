@@ -1,28 +1,30 @@
 <odoo>
   <data>
     <!-- explicit list view definition -->
-<!--
+
     <record model="ir.ui.view" id="realestate.list">
       <field name="name">realestate list</field>
       <field name="model">realestate.realestate</field>
       <field name="arch" type="xml">
         <tree>
           <field name="name"/>
+          <!--
           <field name="value"/>
           <field name="value2"/>
+          -->
         </tree>
       </field>
     </record>
--->
+
 
     <!-- actions opening views on models -->
-<!--
+
     <record model="ir.actions.act_window" id="realestate.action_window">
       <field name="name">realestate window</field>
       <field name="res_model">realestate.realestate</field>
       <field name="view_mode">tree,form</field>
     </record>
--->
+
 
     <!-- server action to the one above -->
 <!--
@@ -49,6 +51,15 @@
     <menuitem name="Menu 1" id="realestate.menu_1" parent="realestate.menu_root"/>
     <menuitem name="Menu 2" id="realestate.menu_2" parent="realestate.menu_root"/>
 -->
+
+    <!-- Three Level Menu -->
+
+    <menuitem id="realestate.menu_root" name="Real Estate">
+        <menuitem id="realestate.menu_1" name="Advertisements" parent="realestate.menu_root">
+            <menuitem id="estate.menu_1_list" name="List" action="realestate.action_window" parent="realestate.menu_1"/>
+        </menuitem>
+    </menuitem>
+
     <!-- actions -->
 <!--
     <menuitem name="List" id="realestate.menu_1_list" parent="realestate.menu_1"
