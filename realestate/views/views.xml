@@ -14,6 +14,7 @@
           <field name="expected_price"/>
           <field name="selling_price"/>
           <field name="date_availability"/>
+          <field name="state"/>
         </tree>
       </field>
     </record>
@@ -74,7 +75,7 @@
         <field name="living_area"/>
         <field name="facades"/>
         <separator/>
-        <filter name="active" string="Available" domain="[('active', '=', 'True')]"/>
+        <filter name="state" string="Available" domain="['|', ('state', '=', 'new'), ( 'state', '=', 'new')]"/>
         <group expand="1" string="Group By">
           <filter name="postcode" string="Postcode" context="{'group_by': 'postcode'}" />
         </group>
