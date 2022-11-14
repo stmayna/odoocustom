@@ -1,0 +1,20 @@
+<odoo>
+  <data>
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="estate.action_window">
+      <field name="name">Properties</field>
+      <field name="res_model">estate</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+        <!-- Three Level Menu -->
+
+    <menuitem id="estate.menu_root" name="Real Estate">
+        <menuitem id="estate.menu_1" name="Advertisement">
+            <menuitem id="estate.menu_1_list" action="estate.action_window"/>
+        </menuitem>
+    </menuitem>
+    
+  </data>
+</odoo>
