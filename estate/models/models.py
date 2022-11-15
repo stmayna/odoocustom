@@ -8,6 +8,8 @@ class estate(models.Model):
     _description = 'estate'
     
     name = fields.Char(required=True)
+    user_id = fields.Many2one('res.users', string='Salesperson', index=True, default=lambda self: self.env.user)
+    buyer_id = fields.Many2one('res.partner', string='Buyer', index=True)
     description = fields.Text()
     postcode = fields.Char()
     date_availability = fields.Date('Available From',copy=False, default=lambda self: fields.Datetime.today())
@@ -29,4 +31,4 @@ class estate(models.Model):
         default='new',
         copy=False,
     )
-    property_type_id = fields.Many2one('res.type', string='Partner')
+    property_type_id = fields.Char(string='Property Type')
