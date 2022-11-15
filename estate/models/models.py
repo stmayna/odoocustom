@@ -29,3 +29,4 @@ class estate(models.Model):
         default='new',
         copy=False,
     )
+    property_type_id = fields.Many2one('res.type', string='Partner')
