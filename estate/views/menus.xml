@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <!-- Three Level Menu -->
-
-    <!-- <menuitem id="estate.menu_root" name="Real Estate">
-        <menuitem id="estate.menu_1" name="Advertisement">
-            <menuitem id="estate.menu_1_list" action="estate.action_window"/>
-        </menuitem>
-    </menuitem> -->
 
     <menuitem id="estate.menu_root" name="Real Estate"/>
     <menuitem id="estate.menu_1" name="Advertisement" parent="estate.menu_root"/>
