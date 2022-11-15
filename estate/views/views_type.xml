@@ -2,28 +2,20 @@
   <data>
     <!-- explicit list view definition -->
 
-    <record model="ir.ui.view" id="estate_list">
-      <field name="name">estate list</field>
-      <field name="model">estate</field>
+    <record model="ir.ui.view" id="type_list">
+      <field name="name">estate type list</field>
+      <field name="model">estate.property.type</field>
       <field name="arch" type="xml">
         <tree>
-          <field name="name" string="Title"/>
-          <field name="postcode"/>
-          <field name="bedrooms"/>
-          <field name="living_area"/>
-          <field name="expected_price"/>
-          <field name="selling_price"/>
-          <field name="date_availability"/>
-          <field name="state"/>
         </tree>
       </field>
     </record>
 
     <!-- explicit form view definition -->
 
-    <record model="ir.ui.view" id="estate_form">
-      <field name="name">estate form</field>
-      <field name="model">estate</field>
+    <!-- <record model="ir.ui.view" id="estate.type.form">
+      <field name="name">estate type form</field>
+      <field name="model">estate.property.type</field>
       <field name="arch" type="xml">
         <form>
           <sheet>
@@ -59,13 +51,13 @@
           </sheet>
         </form>
       </field>
-    </record>
+    </record> -->
 
     <!-- search filter and group by -->
 
-    <record model="ir.ui.view" id="estate_search">
-      <field name="name">estate search</field>
-      <field name="model">estate</field>
+    <!-- <record model="ir.ui.view" id="estate.type.search">
+      <field name="name">estate type search</field>
+      <field name="model">estate.property.type</field>
       <field name="arch" type="xml">
         <search string="Availability">
         <field name="name"/>
@@ -81,13 +73,13 @@
         </group>
         </search>
       </field>
-    </record>
+    </record> -->
 
     <!-- actions opening views on models -->
 
-    <record model="ir.actions.act_window" id="estate.action_window">
-      <field name="name">Properties</field>
-      <field name="res_model">estate</field>
+    <record model="ir.actions.act_window" id="type">
+      <field name="name">Property Types</field>
+      <field name="res_model">estate.property.type</field>
       <field name="view_mode">tree,form</field>
     </record>
 
