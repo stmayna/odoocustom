@@ -15,7 +15,7 @@
           <field name="selling_price"/>
           <field name="date_availability"/>
           <field name="state"/>
-          <field name="property_type_id" />
+          <field name="property_type_id" widget="many2many_tags"/>
           <field name="tag_ids" />
         </tree>
       </field>
