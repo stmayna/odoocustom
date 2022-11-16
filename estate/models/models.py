@@ -33,3 +33,4 @@ class estate(models.Model):
     )
     property_type_id = fields.Char(string='Property Type')
     tag_ids = fields.Char()
+    offer_ids = fields.Many2one('estate.property.offer')

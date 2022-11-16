@@ -59,6 +59,11 @@
                     <field name="property_type_id" /> 
                     </group>                  
                 </page>
+                <page string="Offers">
+                    <group>
+                    <field name="offer_ids"/>
+                    </group>                  
+                </page>
                 <page string="Other Info">
                     <group>
                     <field name="user_id"/>

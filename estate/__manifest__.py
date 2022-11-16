@@ -28,6 +28,7 @@
         'views/views_prop.xml',
         'views/views_type.xml',
         'views/views_tags.xml',
+        'views/views_offer.xml',
         'views/menus.xml',
     ],
     # only loaded in demonstration mode

@@ -8,6 +8,9 @@
     <menuitem id="estate_menu_2" name="Settings" parent="estate_menu_root"/>
     <menuitem id="estate_menu_2A_list" action="type" parent="estate_menu_2"/>
     <menuitem id="estate_menu_2B_list" action="prop_tags" parent="estate_menu_2"/>
+    <menuitem id="estate_menu_2C_list" action="prop_offer" parent="estate_menu_2"/>
+
+    
 
     </data>
 </odoo>
