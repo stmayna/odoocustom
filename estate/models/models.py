@@ -32,3 +32,4 @@ class estate(models.Model):
         copy=False,
     )
     property_type_id = fields.Char(string='Property Type')
+    tag_ids = fields.Char()

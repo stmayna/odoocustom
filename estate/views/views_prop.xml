@@ -16,6 +16,7 @@
           <field name="date_availability"/>
           <field name="state"/>
           <field name="property_type_id" />
+          <field name="tag_ids" />
         </tree>
       </field>
     </record>
@@ -30,6 +31,7 @@
           <sheet>
           <h1>
           <field name="name" placeholder="Name"/>
+          <field name="tag_ids" />
           </h1>
             <group>
               <group>
