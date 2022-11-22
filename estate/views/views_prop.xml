@@ -15,8 +15,8 @@
           <field name="selling_price"/>
           <field name="date_availability"/>
           <field name="state"/>
-          <field name="property_type_id" widget="many2many_tags"/>
-          <field name="tag_ids" />
+          <field name="property_type_id"/>
+          <field name="tag_ids" widget="many2many_tags"/>
         </tree>
       </field>
     </record>
@@ -31,8 +31,8 @@
           <sheet>
           <h1>
           <field name="name" placeholder="Name"/>
-          <field name="tag_ids" />
           </h1>
+          <field name="tag_ids" widget="many2many_tags"/>
             <group>
               <group>
                 <field name="property_type_id" />
@@ -43,6 +43,7 @@
                 <field name="expected_price"/>
                 <field name="selling_price"/>
               </group>
+            </group>
               <notebook>
                 <page string="Description">
                     <group>
@@ -55,14 +56,11 @@
                     <field name="garden_area"/>
                     <field name="garden_orientation"/> 
                     <field name="active"/> 
-                    <field name="state"/>
-                    <field name="property_type_id" /> 
+                    <field name="state"/> 
                     </group>                  
                 </page>
                 <page string="Offers">
-                    <group>
-                    <field name="offer_ids"/>
-                    </group>                  
+                    <field name="offer_ids" />                 
                 </page>
                 <page string="Other Info">
                     <group>
@@ -71,7 +69,6 @@
                     </group>                  
                 </page>
               </notebook>
-            </group>
           </sheet>
         </form>
       </field>
@@ -92,7 +89,7 @@
         <field name="facades"/>
         <field name="property_type_id" />
         <separator/>
-        <filter name="state" string="Available" domain="['|', ('state', '=', 'new'), ( 'state', '=', 'new')]"/>
+        <filter name="state" string="Available" domain="['|', ('state', 'like', 'new'), ( 'state', 'like', 'offer_received')]"/>
         <group expand="1" string="Group By">
           <filter name="postcode" string="Postcode" context="{'group_by': 'postcode'}" />
         </group>
