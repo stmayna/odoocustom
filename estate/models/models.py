@@ -41,8 +41,17 @@ class Estate(models.Model):
     tag_ids = fields.Many2many('estate.property.tag')
     offer_ids = fields.One2many(
         'estate.property.offer', 'property_id', string='Offers')
+    total_area = fields.Integer(compute='_compute_total_area')
+    best_price = fields.Float(
+        compute='_compute_best_price', string='Best Offer', help="Best offer received")
 
-    # @api.model
-    # def write(self, vals):
-    #     import pdb; pdb.set_trace()
-    #     return super(estate, self).write(vals)
+    @api.depends("living_area", "garden_area")
+    def _compute_total_area(self):
+        for record in self:
+            record.total_area = record.living_area + record.garden_area
+
+    @api.depends("offer_ids.price")
+    def _compute_best_price(self):
+        for offer in self:
+            offer.best_price = max(offer.offer_ids.mapped(
+                "price")) if offer.offer_ids else 0.0
