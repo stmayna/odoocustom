@@ -2,11 +2,17 @@
 
 from odoo import models, fields, api
 from odoo.exceptions import UserError, ValidationError
+from odoo.tools import float_compare, float_is_zero
 
 
 class Estate(models.Model):
+
+    # ---------------------------------------- Private Attributes -------------------------------------
+
     _name = 'estate'
     _description = 'estate'
+
+    # ---------------------------------------- Fields Declaration -------------------------------------
 
     name = fields.Char(required=True)
     user_id = fields.Many2one(
@@ -70,6 +76,18 @@ class Estate(models.Model):
         else:
             self.garden_area = 0
             self.garden_orientation = False
+
+    @api.constrains("expected_price", "selling_price")
+    def _check_price_difference(self):
+        for prop in self:
+            if (
+                not float_is_zero(prop.selling_price, precision_rounding=0.01)
+                and float_compare(prop.selling_price, prop.expected_price * 90.0 / 100.0, precision_rounding=0.01) < 0
+            ):
+                raise ValidationError(
+                    "The selling price must be at least 90% of the expected price! "
+                    + "You must reduce the expected price if you want to accept this offer."
+                )
 
     # ---------------------------------------- Action Methods -------------------------------------
 

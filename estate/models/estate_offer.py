@@ -7,8 +7,17 @@ import pdb
 
 
 class EstatePropertyOffer(models.Model):
+
+    # ---------------------------------------- Private Attributes -------------------------------------
+
     _name = 'estate.property.offer'
     _description = 'estate.property.offer'
+    _sql_constraints = [
+        ('check_price', 'CHECK(price >= 0)',
+         'The offer price must be strictly positive.')
+    ]
+
+    # ---------------------------------------- Fields Declaration -------------------------------------
 
     price = fields.Float()
     state = fields.Selection(
