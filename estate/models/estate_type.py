@@ -10,6 +10,7 @@ class EstatePropertyType(models.Model):
 
     _name = 'estate.property.type'
     _description = 'estate.property.type'
+    _order = "name"
     _sql_constraints = [
         ("check_name", "UNIQUE(name)", "The name must be unique"),
     ]

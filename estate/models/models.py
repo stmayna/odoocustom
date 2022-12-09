@@ -11,6 +11,7 @@ class Estate(models.Model):
 
     _name = 'estate'
     _description = 'estate'
+    _order = "id desc"
 
     # ---------------------------------------- Fields Declaration -------------------------------------
 
