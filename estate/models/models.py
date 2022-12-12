@@ -101,3 +101,10 @@ class Estate(models.Model):
         if 'sold' in self.mapped('state'):
             raise UserError("Canceled properties cannot be sold.")
         return self.write({'state': 'canceled'})
+
+    # ------------------------------------------ CRUD Methods -------------------------------------
+
+    @api.ondelete(at_uninstall=False)
+    def _unlink_if_new_or_canceled(self):
+        if not set(self.mapped("state")) <= {"new", "canceled"}:
+            raise UserError("Only new and canceled properties can be deleted.")
