@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Real Estate",
+    'name': "Real Estate Accounting",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -21,24 +21,24 @@
 
     # any module necessary for this one to work correctly
     'depends': [
-        'base',
-        'web',
+        'estate',
+        'account',
     ],
 
     # always loaded
     'data': [
-        'security/ir.model.access.csv',
-        'views/views_prop.xml',
-        'views/views_type.xml',
-        'views/views_tags.xml',
-        'views/views_offer.xml',
-        "views/views_res_users.xml",
-        'views/menus.xml',
+        # 'security/ir.model.access.csv',
+        # 'views/views_prop.xml',
+        # 'views/views_type.xml',
+        # 'views/views_tags.xml',
+        # 'views/views_offer.xml',
+        # "views/views_res_users.xml",
+        # 'views/menus.xml',
     ],
     # only loaded in demonstration mode
-    'demo': [
-        'demo/demo.xml',
-    ],
+    # 'demo': [
+    #     'demo/demo.xml',
+    # ],
     'application': True,
     'license': "LGPL-3",
 }

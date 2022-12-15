@@ -68,7 +68,7 @@ class EstatePropertyOffer(models.Model):
     @api.model
     def create(self, vals):
         if vals.get("property_id") and vals.get("price"):
-            prop = self.env["estate.property"].browse(vals["property_id"])
+            prop = self.env["estate"].browse(vals["property_id"])
             # We check if the offer is higher than the existing offers
             if prop.offer_ids:
                 max_offer = max(prop.mapped("offer_ids.price"))
