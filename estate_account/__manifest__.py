@@ -33,7 +33,7 @@
         # 'views/views_tags.xml',
         # 'views/views_offer.xml',
         # "views/views_res_users.xml",
-        # 'views/menus.xml',
+        'views/menus.xml',
     ],
     # only loaded in demonstration mode
     # 'demo': [

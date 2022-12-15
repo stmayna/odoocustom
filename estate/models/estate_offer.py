@@ -75,5 +75,5 @@ class EstatePropertyOffer(models.Model):
                 if float_compare(vals["price"], max_offer, precision_rounding=0.01) <= 0:
                     raise UserError(
                         "The offer must be higher than %.2f" % max_offer)
-            prop.state = "offer_received"
+            prop.state = "new"
         return super().create(vals)

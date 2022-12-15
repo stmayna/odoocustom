@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <menuitem id="estate_account_menu_root" name="Real Estate Accounting"/>
+    <!-- <menuitem id="estate_menu_1" name="Advertisement" parent="estate_menu_root"/>
+    <menuitem id="estate_menu_1_list" action="estate.action_window" parent="estate_menu_1"/>
+    <menuitem id="estate_menu_2" name="Settings" parent="estate_menu_root"/>
+    <menuitem id="estate_menu_2A_list" action="type" parent="estate_menu_2"/>
+    <menuitem id="estate_menu_2B_list" action="prop_tags" parent="estate_menu_2"/> 
+    <menuitem id="estate_menu_2C_list" action="prop_offer" parent="estate_menu_2"/>     -->
+
+    </data>
+</odoo>
