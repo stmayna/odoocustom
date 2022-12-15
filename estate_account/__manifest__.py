@@ -28,7 +28,7 @@
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
-        # 'views/views_prop.xml',
+        'views/estate_account.xml',
         # 'views/views_type.xml',
         # 'views/views_tags.xml',
         # 'views/views_offer.xml',
