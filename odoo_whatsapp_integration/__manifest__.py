@@ -16,7 +16,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base', 'sale', 'web', 'stock', 'purchase','account','contacts'],
+    'depends': ['base', 'sale', 'web', 'stock', 'purchase', 'account', 'contacts'],
 
     # always loaded
     'data': [
@@ -31,5 +31,8 @@
         'wizard/wizard_contact.xml',
         'wizard/share_action.xml',
     ],
-    'images':['static/description/main.gif'],
+    'images': ['static/description/main.gif'],
+    'license': "LGPL-3",
+    'application': True,
+
 }
