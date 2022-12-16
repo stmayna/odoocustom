@@ -2,7 +2,7 @@
 
 from odoo import models, fields
 from odoo.exceptions import ValidationError
-from heyoo import WhatsApp
+# from heyoo import WhatsApp
 
 
 class WhatsappInt(models.Model):
