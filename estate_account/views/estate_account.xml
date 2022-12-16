@@ -7,8 +7,8 @@
       <field name="model">estate</field>
       <field name="inherit_id" ref="estate.estate_list"/>
       <field name="arch" type="xml">
-        <tree>
-        </tree>
+      <tree>
+      </tree>
       </field>
     </record>
 
@@ -19,8 +19,8 @@
       <field name="model">estate</field>
       <field name="inherit_id" ref="estate.estate_form"/>
       <field name="arch" type="xml">
-        <tree>
-        </tree>
+      <form>
+      </form>
       </field>
     </record>
 

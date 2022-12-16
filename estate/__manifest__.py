@@ -41,4 +41,5 @@
     ],
     'application': True,
     'license': "LGPL-3",
+    'images': ['statics/search.png'],
 }
