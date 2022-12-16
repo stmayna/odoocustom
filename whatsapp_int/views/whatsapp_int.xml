@@ -1,0 +1,36 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="whatsapp_int_list">
+      <field name="name">whatsapp integration list</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_tree"/>
+      <field name="arch" type="xml">
+        <tree>
+        </tree>
+      </field>
+    </record>
+
+    <!-- explicit form view definition -->
+
+     <record model="ir.ui.view" id="whatsapp_int_form">
+      <field name="name">whatsapp integration form</field>
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
+      <field name="arch" type="xml">
+        <tree>
+        </tree>
+      </field>
+    </record>
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="whatsapp_int.action_window">
+      <field name="name">Whatsapp Integration</field>
+      <field name="res_model">res.partner</field>
+      <field name="view_mode">tree,kanban,form</field>
+    </record>
+
+  </data>
+</odoo>
