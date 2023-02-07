@@ -108,3 +108,5 @@ class Estate(models.Model):
     def _unlink_if_new_or_canceled(self):
         if not set(self.mapped("state")) <= {"new", "canceled"}:
             raise UserError("Only new and canceled properties can be deleted.")
+
+    

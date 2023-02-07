@@ -19,19 +19,20 @@
       <field name="model">res.partner</field>
       <field name="inherit_id" ref="base.view_partner_form"/>
       <field name="arch" type="xml">
-            <notebook position="inside">
+      <div position="inside" class="oe_button_box" name="button_box">
+        <button name="send_message" type="object" class="oe_stat_button" icon="fa-whatsapp" string="Send Message">
+          <!-- <field name="field_name"  widget="statinfo"/> -->
+        </button>
+        </div>
+            <!-- <notebook position="inside">
                 <page name="whatsapp_contact_information" string="WhatsApp">
-                <group>                  
-                </group>
-                <group>
                   <div class="oe_button_box" name="button_box">
                     <button name="send_message" type="object" class="oe_stat_button" icon="fa-whatsapp">
                       <field name="wa_number"/>
                     </button>
                   </div>
-                </group>
                 </page>
-            </notebook>
+            </notebook> -->
       </field>
     </record>
 
