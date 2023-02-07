@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <menuitem id="whatsapp_int_menu_root" name="WhatsApp" web_icon="whatsapp_int,statics/whatsapp.png"/>
+    <menuitem id="whatsapp_int_menu_1" name="Contacts" parent="whatsapp_int_menu_root"/>
+    <menuitem id="whatsapp_int_menu_1_list" action="whatsapp_int.action_window" parent="whatsapp_int_menu_1"/>
+    <!-- <menuitem id="estate_menu_2" name="Settings" parent="estate_menu_root"/>
+    <menuitem id="estate_menu_2A_list" action="type" parent="estate_menu_2"/>
+    <menuitem id="estate_menu_2B_list" action="prop_tags" parent="estate_menu_2"/> 
+    <menuitem id="estate_menu_2C_list" action="prop_offer" parent="estate_menu_2"/>  -->
+
+    </data>
+</odoo>
