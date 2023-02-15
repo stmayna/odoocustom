@@ -19,7 +19,7 @@
 
     # any module necessary for this one to work correctly
     'depends': [
-        'base',
+        'account_accountant',
     ],
 
     # always loaded
@@ -29,6 +29,7 @@
         # 'views/menus.xml',
     ],
     'application': True,
+    'installable': True,
     'license': 'LGPL-3',
     # 'images': ['statics/whatsapp.png'],
 }
