@@ -19,7 +19,7 @@
 
     # any module necessary for this one to work correctly
     'depends': [
-        'account_accountant',
+        'base',
     ],
 
     # always loaded
