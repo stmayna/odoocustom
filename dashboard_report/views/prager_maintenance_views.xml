@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- tree view -->
+        <record id="prager_maintenance_equipment_summary_tree" model="ir.ui.view">
+            <field name="name">maintenance.equipment.summary.tree</field>
+            <field name="model">maintenance.equipment.summary</field>
+            <field name="type">tree</field>
+            <field name="mode">primary</field>
+            <field name="priority" eval="16" />
+            <field name="active" eval="True" />
+            <field name="arch" type="xml">
+                <tree string="Summary" create="false" delete="false" edit="false">
+                    <field name="equipment_id" />
+                    <field name="total_mr" />
+                    <field name="total_duration" />
+                </tree>
+            </field>
+        </record>
+        <!-- action window -->
+        <record id="prager_maintenance_equipment_summary_action_window" model="ir.actions.act_window">
+            <field name="type">ir.actions.act_window</field>
+            <field name="name">Equipment Summary</field>
+            <field name="res_model">maintenance.equipment.summary</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <!-- menu -->
+        <menuitem
+        id="_prager_menu_equipment_summary"
+        name="Equipment Summary" 
+        parent="maintenance.menu_m_request"
+        action="prager_maintenance_equipment_summary_action_window"
+        />
+    </data>
+</odoo>

@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+prager_dashboard_report.access_maintenance_equipment_summary,access_maintenance_equipment_summary,prager_dashboard_report.model_maintenance_equipment_summary,base.group_user,1,0,0,0
